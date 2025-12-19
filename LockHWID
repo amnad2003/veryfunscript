@@ -6,12 +6,12 @@ return {
 
     {
         HWID = "6a6d027078a662f2250ae055478f395e1ebe41ea82760dcdab0c7df30ae99b5f",
-        EXPIRE = 1768867199 -- 19/01/2026 23:59:59
+        EXPIRE = 0
     },
 
     {
-        HWID = "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
-        EXPIRE = 0 -- ไม่หมดอายุ
+        HWID = "1881d10b5c8efea264be00bf3a41e13823db3b6c7562a6cd6b0ae0308908b7af",
+        EXPIRE = 1768867199 -- 19/01/2026 23:59:59
     }
 }
 
