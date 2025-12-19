@@ -1,0 +1,17 @@
+return {
+    {
+        HWID = "a1523446eac10f93e21c239cf43afb7c3ece617ca17b7bc21ccac75e350cd7e2",
+        EXPIRE = 1768867199 -- 19/01/2026 23:59:59
+    },
+
+    {
+        HWID = "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        EXPIRE = 0 -- ตัวอย่างวันอื่น
+    },
+
+    {
+        HWID = "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        EXPIRE = 0 -- ไม่หมดอายุ
+    }
+}
+
