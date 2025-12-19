@@ -18,6 +18,8 @@ local RunService = game:GetService("RunService")
 
 local player = Players.LocalPlayer
 
+_G.AutoKill    = false
+_G.AutoLoot    = false
 _G.AutoQuest   = false
 _G.HoverHeight = 10
 _G.FPS         = 60
@@ -199,7 +201,6 @@ end
 -- วางต่อท้ายสคริปต์หลักได้ทันที
 --=====================================================
 
-local Players = game:GetService("Players")
 local TeleportService = game:GetService("TeleportService")
 local LocalPlayer = Players.LocalPlayer
 
@@ -210,8 +211,11 @@ local JOB_ID   = game.JobId
 -- CONFIG
 -------------------------------------------------------
 
+-- ใช้ลิงก์รันสคริปต์ใหม่หรือไม่
+local USE_LINK = true   -- << true = รันออโต้ 100% | false = สะอาด ไม่ผ่านลิงก์
+
 -- ใส่ลิงก์ไฟล์ "สคริปต์นี้เอง" (ใช้เมื่อ USE_LINK = true)
-local MAIN_SCRIPT_URL = "https://raw.githubusercontent.com/yourname/yourscript/main.lua"
+local MAIN_SCRIPT_URL = "https://raw.githubusercontent.com/amnad2003/veryfun_autofarm/refs/heads/main/VeryFunSHOPMountRNG.Lua"
 
 -------------------------------------------------------
 
@@ -272,3 +276,4 @@ task.spawn(function()
         end
     end
 end)
+
