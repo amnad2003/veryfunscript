@@ -452,7 +452,7 @@ local EggPage = CreateCategory("Egg")
 local TeleportTab = CreateCategory("Island")
 local SettingsPage = CreateCategory("Settings")
 
-local BossList = {'Flaragon','Glazadon','Flarecrest','Mountusk'}
+local BossList = {'Flaragon','Glazadon','Flarecrest','Mountusk','ShadeKnight'}
 local BossModes = {'Specific', 'All'}
 local SelectedBossMode = ensureOption("BossMode", BossModes[1])
 local SelectedBoss = ensureOption("SelectedBoss", BossList[1])
@@ -497,7 +497,7 @@ Widget:NumberBox(SettingsPage, "Monster Count", 0, 10, 0, MonsterCount)
 Widget:Toggle(SettingsPage, "Auto Exit Door", ensureToggle("ExitDoor", false))
 
 local CodeList = {
-    'coin','cam','xp','thanksgiving','feather200','thanks300','friday','feather','rankA','endless'
+    'coin','cam','xp','thanksgiving','feather200','thanks300','friday','feather','rankA','endless','eandy','delay','patch'
 }
 Widget:Button(SettingsPage, 'Redeem All Code', function()
     for _,v in pairs(CodeList) do
@@ -736,7 +736,7 @@ task.spawn(function()
         task.wait(0.5)
         if Toggles.FarmBoss.Value then
             local success, err = pcall(function()
-                local BossNames = {'Flaragon','Glazadon','Flarecrest','Mountusk'}
+                local BossNames = {'Flaragon','Glazadon','Flarecrest','Mountusk','ShadeKnight'}
                 local targets = {}
                 
                 if Options.BossMode.Value == "All" then
