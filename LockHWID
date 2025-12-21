@@ -8,6 +8,10 @@ return {
         HWID = "6a6d027078a662f2250ae055478f395e1ebe41ea82760dcdab0c7df30ae99b5f",
         EXPIRE = 0
     },
+{
+        HWID = "63a63cfd56d040b1c991e260aded6afd46b8e7213a1cfb07ce4d0fd444194468",
+        EXPIRE = 0
+    },
 
     {
         HWID = "1881d10b5c8efea264be00bf3a41e13823db3b6c7562a6cd6b0ae0308908b7af",
