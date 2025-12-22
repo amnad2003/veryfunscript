@@ -5,11 +5,6 @@ return {
     },
 
     {
-        HWID = "6a6d027078a662f2250ae055478f395e1ebe41ea82760dcdab0c7df30ae99b5f",
-99b5f",
-        EX
-    },
-    {
         HWID = "63a63cfd56d040b1c991e260aded6afd46b8e7213a1cfb07ce4d0fd444194468",
         EXPIRE = 0
     },
