@@ -92,6 +92,7 @@ end)
 local Teleport = UI:CreatePage("Teleport")
 
 local TeleportPoints = {
+    ["Armor lce"] = CFrame.new(-462.498, 789.776, -864.203),
     ["Armor 2"] = CFrame.new(-47.604, 29.500, -207.001),
     ["Armor 3"] = CFrame.new(984.033, 30.500, 348.176),
     ["Armor 4"] = CFrame.new(-632.616, 29.500, -587.241),
