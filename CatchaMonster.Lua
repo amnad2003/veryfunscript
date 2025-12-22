@@ -452,7 +452,14 @@ local EggPage = CreateCategory("Egg")
 local TeleportTab = CreateCategory("Island")
 local SettingsPage = CreateCategory("Settings")
 
-local BossList = {'Flaragon','Glazadon','Flarecrest','Mountusk','ShadeKnight'}
+local BossList = {
+    "Flaragon","Glazadon","Flarecrest","Mountusk","ShadeKnight",
+    "Infernon","Frosthorn","Voltigar","Stormclash","Terradon",
+    "Darkreign","Voidlurker","Nightbringer",
+    "Luminary","Radiantor",
+    "Dragoryx","AncientDrake","VoidDragon","Elderwyrm","ChaosDragon",
+    "Dreadlord","NetherKing","TitanPrime","EclipseEmperor"
+}
 local BossModes = {'Specific', 'All'}
 local SelectedBossMode = ensureOption("BossMode", BossModes[1])
 local SelectedBoss = ensureOption("SelectedBoss", BossList[1])
@@ -736,7 +743,12 @@ task.spawn(function()
         task.wait(0.5)
         if Toggles.FarmBoss.Value then
             local success, err = pcall(function()
-                local BossNames = {'Flaragon','Glazadon','Flarecrest','Mountusk','ShadeKnight'}
+                local BossNames = {"Flaragon","Glazadon","Flarecrest","Mountusk","ShadeKnight",
+    "Infernon","Frosthorn","Voltigar","Stormclash","Terradon",
+    "Darkreign","Voidlurker","Nightbringer",
+    "Luminary","Radiantor",
+    "Dragoryx","AncientDrake","VoidDragon","Elderwyrm","ChaosDragon",
+    "Dreadlord","NetherKing","TitanPrime","EclipseEmperor"}
                 local targets = {}
                 
                 if Options.BossMode.Value == "All" then
