@@ -34,7 +34,7 @@ UI:CreateLabel(FarmPage,"⚔ Auto Farm")
 UI:CreateDropdown(
     FarmPage,
     "Select Sea",
-    {"1","2","3","4"},
+    {"1","2","3","4","5"},
     function(v)
         _G.Sea = v
     end
@@ -69,6 +69,7 @@ local SeaPos = {
     ["2"] = CFrame.new(1277,85,-77),
     ["3"] = CFrame.new(1259,85,-276),
     ["4"] = CFrame.new(1257,85,-527),
+    ["5"] = CFrame.new(459.347, 83.376, -1032.163),
 }
 
 local function EquipTool()
