@@ -21,8 +21,8 @@ return {
     },
 
     {
-        HWID = "",
-        EXPIRE = 0
+        HWID = "9ea0782403aa3ee977571451452c7c5346e26c2afc80d8cbb1ef368a3cb11c03",
+        EXPIRE = 1769619540 --28/01/2026 23:59
     },
 
     {
