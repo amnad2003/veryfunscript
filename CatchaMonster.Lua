@@ -479,7 +479,7 @@ Widget:NumberBox(EggPage, "Selected Machine (1-4)", 1, 4, 0, SelectedMachine)
 Widget:Toggle(EggPage, "Auto Hatch Egg", ensureToggle("AutoHatch", false))
 Widget:Toggle(EggPage, "Keep Egg Bosses", ensureToggle("AutoOpenBoss", false))
 Widget:Toggle(EggPage, "Keep Egg Monster", ensureToggle("AutoOpen", false))
-local Island = {'First Land','Ice Land','Volcano Land','Neverland'}
+local Island = {'First Land','Ice Land','Volcano Land','Neverland','Duneveil Land'}
 local SelectedIsLand = ensureOption("SelectedIsLand", Island[1])
 CreateDropdown(EggPage, "Selected IsLand", Island, SelectedIsLand)
 Widget:Toggle(EggPage, "Auto Find Egg", ensureToggle("AutoFindEgg", false))
@@ -1017,22 +1017,21 @@ task.spawn(function()
                 local TargetPos, MaxDistance = nil, nil
 
                 if Options.SelectedIsLand.Value == "First Land" then
-                    TargetPos = Vector3.new(84, -60, 645)
-                    MaxDistance = 1000
-                elseif Options.SelectedIsLand.Value == "Ice Land" then
-                    TargetPos = Vector3.new(-2304, 42, -1420)
-                    MaxDistance = 1500
-                elseif Options.SelectedIsLand.Value == "Volcano Land" then
-                    TargetPos = Vector3.new(-9, -116, -1539)
-                    MaxDistance = 1500
-                elseif Options.SelectedIsLand.Value == "Neverland" then
-                    TargetPos = Vector3.new(3651.029, -44.811, 2231.164)
-                    MaxDistance = 1500
-                end
-                elseif Options.SelectedIsLand.Value == "Duneveil Isle" then
-                    TargetPos = Vector3.new(730.523, -119.168, -3161.539)
-                    MaxDistance = 1500
-                end
+    TargetPos = Vector3.new(84, -60, 645)
+    MaxDistance = 1000
+elseif Options.SelectedIsLand.Value == "Ice Land" then
+    TargetPos = Vector3.new(-2304, 42, -1420)
+    MaxDistance = 1500
+elseif Options.SelectedIsLand.Value == "Volcano Land" then
+    TargetPos = Vector3.new(-9, -116, -1539)
+    MaxDistance = 1500
+elseif Options.SelectedIsLand.Value == "Neverland" then
+    TargetPos = Vector3.new(3651.029, -44.811, 2231.164)
+    MaxDistance = 1500
+elseif Options.SelectedIsLand.Value == "Duneveil Isle" then
+    TargetPos = Vector3.new(730.523, -119.168, -3161.539)
+    MaxDistance = 1500
+end
 
                 if TargetPos and LocalPlayer:DistanceFromCharacter(TargetPos) >= MaxDistance then
                     Collection:Teleport(TargetPos)
