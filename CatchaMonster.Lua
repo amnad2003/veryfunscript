@@ -453,12 +453,7 @@ local TeleportTab = CreateCategory("Island")
 local SettingsPage = CreateCategory("Settings")
 
 local BossList = {
-    "Flaragon","Glazadon","Flarecrest","Mountusk","ShadeKnight",
-    "Infernon","Frosthorn","Voltigar","Stormclash","Terradon",
-    "Darkreign","Voidlurker","Nightbringer",
-    "Luminary","Radiantor",
-    "Dragoryx","AncientDrake","VoidDragon","Elderwyrm","ChaosDragon",
-    "Dreadlord","NetherKing","TitanPrime","EclipseEmperor"
+    "Flaragon","Glazadon","Flarecrest","Mountusk","ShadeKnight","Frost Floradelle"
 }
 local BossModes = {'Specific', 'All'}
 local SelectedBossMode = ensureOption("BossMode", BossModes[1])
@@ -489,11 +484,14 @@ local SelectedIsLand = ensureOption("SelectedIsLand", Island[1])
 CreateDropdown(EggPage, "Selected IsLand", Island, SelectedIsLand)
 Widget:Toggle(EggPage, "Auto Find Egg", ensureToggle("AutoFindEgg", false))
 
+
+Widget:Button(TeleportTab, 'Duneveil Isle', function() Collection:Teleport(Vector3.new(790.170, -39.027, -3452.533)) end)
 Widget:Button(TeleportTab, 'First IsLand', function() Collection:Teleport(Vector3.new( 85, -60, 669 )) end)
 Widget:Button(TeleportTab, 'Sky IsLand', function() Collection:Teleport(Vector3.new( 573, 3477, -228 )) end)
 Widget:Button(TeleportTab, 'Ice IsLand', function() Collection:Teleport(Vector3.new( -2211, -117, -979 )) end)
 Widget:Button(TeleportTab, 'Volcano IsLand', function() Collection:Teleport(Vector3.new( 167, -118, -1150 )) end)
 Widget:Button(TeleportTab, 'Neverland', function() Collection:Teleport(Vector3.new(3525.178, -124.396, 2046.970)) end)
+
 
 local FPSCAP = ensureOption("FPSCAP", 120)
 Widget:NumberBox(SettingsPage, "Set Fps Cap", 5, 240, 0, FPSCAP)
@@ -743,12 +741,7 @@ task.spawn(function()
         task.wait(0.5)
         if Toggles.FarmBoss.Value then
             local success, err = pcall(function()
-                local BossNames = {"Flaragon","Glazadon","Flarecrest","Mountusk","ShadeKnight",
-    "Infernon","Frosthorn","Voltigar","Stormclash","Terradon",
-    "Darkreign","Voidlurker","Nightbringer",
-    "Luminary","Radiantor",
-    "Dragoryx","AncientDrake","VoidDragon","Elderwyrm","ChaosDragon",
-    "Dreadlord","NetherKing","TitanPrime","EclipseEmperor"}
+                local BossNames = {"Flaragon","Glazadon","Flarecrest","Mountusk","ShadeKnight","Frost Floradelle"}
                 local targets = {}
                 
                 if Options.BossMode.Value == "All" then
@@ -1036,6 +1029,10 @@ task.spawn(function()
                     TargetPos = Vector3.new(3651.029, -44.811, 2231.164)
                     MaxDistance = 1500
                 end
+                elseif Options.SelectedIsLand.Value == "Duneveil Isle" then
+                    TargetPos = Vector3.new(730.523, -119.168, -3161.539)
+                    MaxDistance = 1500
+                end
 
                 if TargetPos and LocalPlayer:DistanceFromCharacter(TargetPos) >= MaxDistance then
                     Collection:Teleport(TargetPos)
@@ -1141,7 +1138,7 @@ task.spawn(function()
                 hum.PlatformStand = true
                 
                 local cam = Workspace.CurrentCamera
-                local speed = 50 
+                local speed = 300 
                 
                 local newVel = Vector3.new(0,0,0)
                 
